@@ -14,38 +14,9 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-    <!--//////////////////////////////////////////////////////// -->
-
-    <
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
-
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <!-- Left navbar links -->
@@ -53,6 +24,9 @@
             <li class="nav-item">
                 <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Manage Customer</a></li>
+            </ol>
         </ul>
     </nav>
     <!-- /.navbar -->
@@ -137,77 +111,73 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-12">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Manage Customer</a></li>
-                        </ol>
+  <!-- text edit --------------->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Customer ID">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Customer Name">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Address">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Salary">
+                                </div>
+                            </div>
+                        </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <td>
+                                <button type="button" class="btn btn-md btn-info">Save</button>
+                            </td>
 
-  <!--//////////////////////////////////////////////////////////////////////////////////////////////////////  -->
-        <div class="card-tools">
-            <div class="input-group input-group-sm" style="width: 150px;">
-                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.card-header -->
+                                <td>
+                                    <button type="button" class="btn btn-md btn-info">Update</button>
+                                </td>
+                        </div>
+                    </div>
+  <!--/table  -->
     <div class="card-body table-responsive p-0">
         <table class="table table-hover text-nowrap">
             <thead>
             <tr>
-                <th>ID</th>
-                <th>User</th>
-                <th>Date</th>
-                <th>Status</th>
-                <th>Reason</th>
+                <th>Customer ID</th>
+                <th>Customer Name</th>
+                <th>Address</th>
+                <th>Salary</th>
+                <th>Operate</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>183</td>
-                <td>John Doe</td>
-                <td>11-7-2014</td>
-                <td><span class="tag tag-success">Approved</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                <td>C-001</td>
+                <td>Kamal</td>
+                <td>Colombo01</td>
+                <td>1500</td>
+
             </tr>
             <tr>
-                <td>219</td>
-                <td>Alexander Pierce</td>
-                <td>11-7-2014</td>
-                <td><span class="tag tag-warning">Pending</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-            </tr>
-            <tr>
-                <td>657</td>
-                <td>Bob Doe</td>
-                <td>11-7-2014</td>
-                <td><span class="tag tag-primary">Approved</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-            </tr>
-            <tr>
-                <td>175</td>
-                <td>Mike Doe</td>
-                <td>11-7-2014</td>
-                <td><span class="tag tag-danger">Denied</span></td>
-                <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                <td>C-001</td>
+                <td>Kamal</td>
+                <td>Colombo01</td>
+                <td>1500</td>
+
             </tr>
             </tbody>
         </table>
     </div>
-    <!-- /.card-body -->
-
-<!-- /.card -->
 </div>
 </div>
-
-
-
         </div><!-- /.col -->
     </div><!-- /.row -->
 </div><!-- /.container-fluid -->
-</div>
-</div>
+
 
 
 
