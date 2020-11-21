@@ -1,10 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WEBPOS | DEP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="node_modules/admin-lte/plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="node_modules/admin-lte/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="node_modules/admin-lte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <style>
+   #btnPlaceOrder{
+       transform: translateX(650px);
+   }
+   #btnNewCustomer{
+       transform: translateX(530px);
+   }
+    </style>
 </head>
-<body>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.navbar -->
 
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="/" class="brand-link text-center">
+            <span class="brand-text">WEB POS | Place Order</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class
+                         with font-awesome or any other icon font library -->
+                    <li class="nav-item">
+                        <p>
+                            <a href="#" class="nav-link">
+                                <a href="index.html">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    Dashboard
+                                </a>
+                            </a>
+                        </p>
+                    </li>
+                    <li class="nav-item">
+                        <p>
+                            <a href="#" class="nav-link">
+                                <a href="managecustomer.html">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    Manage Customer
+                                </a>
+                            </a>
+                        </p>
+                    </li>
+                    <li class="nav-item">
+                        <p>
+                            <a href="#" class="nav-link">
+                                <a href="manageitem.html">
+                                    <i class="nav-icon fas fa-list-ol"></i>
+                                    Manage Items
+                                </a>
+                            </a>
+                        </p>
+                    </li>
+                    <li class="nav-item">
+                        <p>
+                            <a href="#" class="nav-link">
+                                <a href="placeorder.html">
+                                    <i class="nav-icon fas fa-cart-plus"></i>
+                                    Place Order
+                                </a>
+                            </a>
+                        </p>
+                    </li>
+                    <li class="nav-item">
+                        <p>
+                            <a href="#" class="nav-link">
+                                <a href="searchorder.html">
+                                    <i class="nav-icon fas fa-search"></i>
+                                    Search Order
+                                </a>
+                            </a>
+                        </p>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+
+        <!--date-time-->
+            <div class="row">
+                <div class="col-1">Order ID</div>
+                <div class="col-2">
+                    <input type="text" class="form-control" placeholder="Order ID">
+                </div>
+                <div class="col-1">Date</div>
+                <div class="col-2">
+                    <input type="text" class="form-control" placeholder="Date">
+                </div>
+                <div class="col-1">Time</div>
+                <div class="col-2">
+                    <input type="text" class="form-control" placeholder="Time">
+                </div>
+            </div>
+
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-12">
+                        <!-- text edit --------------->
+                        <h6>Customer data</h6>
+                        <div></div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Customer ID">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Customer Name">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Address">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Salary">
+                                </div>
+                            </div>
+                        </div>
+                        <h6>Item data</h6>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Item code">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Description">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Qty on hand">
+                                </div>
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Unit price">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <input type="text" class="form-control" placeholder="Qty">
+                                </div>
+                                <td>
+                                    <button type="button" class="btn btn-md btn-info">Add to Cart</button>
+                                </td>
+
+                                <td>
+                                    <button type="button" class="btn btn-md btn-info" id="btnNewCustomer">+new Customer</button>
+                                </td>
+                            </div>
+                        </div>
+                        <!--/table  -->
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover text-nowrap">
+                                <thead>
+                                <tr>
+                                    <th>Customer ID</th>
+                                    <th>Customer Name</th>
+                                    <th>Address</th>
+                                    <th>Salary</th>
+                                    <th>Operate</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>C-001</td>
+                                    <td>Kamal</td>
+                                    <td>Colombo01</td>
+                                    <td>1500</td>
+
+                                </tr>
+                                <tr>
+                                    <td>C-001</td>
+                                    <td>Kamal</td>
+                                    <td>Colombo01</td>
+                                    <td>1500</td>
+
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        <div class="card-body">
+            <div class="row">
+                <div class="col-1">Total Cost</div>
+                <div class="col-2">
+                    <input type="text" class="form-control" placeholder="total cost">
+                </div>
+                <td>
+                    <button type="button" class="btn btn-md btn-info" id="btnPlaceOrder">Place Order</button>
+                </td>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-wrapper -->
+<footer class="main-footer">
+    <strong>Copyright &copy; 2020 <a href="http://ijse.lk">ijse.lk</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 1.0.0
+    </div>
+</footer>
+<!-- ./wrapper -->
+<script src="node_modules/admin-lte/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="node_modules/admin-lte/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+    $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="node_modules/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="node_modules/admin-lte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="node_modules/admin-lte/dist/js/adminlte.js"></script>
 </body>
 </html>
